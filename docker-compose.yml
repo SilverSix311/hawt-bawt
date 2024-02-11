@@ -1,0 +1,14 @@
+services:
+  palworld-discord-bot:
+    image: ghcr.io/thegrandpackard/palworld-discord-bot:latest
+    restart: unless-stopped
+    container_name: palworld-discord-bot
+    ports:
+      - 2112:2112/tcp
+    environment:
+      - DISCORD_TOKEN=
+      - GUILD_ID=
+      - CHANNEL_ID=
+      - RCON_HOST=
+      - RCON_PASSWORD=
+      - REGISTER_COMMANDS=FALSE
